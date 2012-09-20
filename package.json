@@ -1,0 +1,17 @@
+{
+  "name": "sum-component",
+  "version": "0.0.1",
+  "description": "Sum utility",
+  "dependencies": {
+    "to-function": "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "component": {
+    "scripts": {
+      "map/index.js": "index.js"
+    }
+  }
+}
