@@ -27,3 +27,15 @@ describe('sum(arr)', function(){
     }).should.equal(11);
   })
 })
+
+describe('sum(obj, fn)', function(){
+  it('should sum values', function(){
+    sum({
+      foo: 1,
+      bar: 2,
+      baz: 3
+    }, function(val){
+      return val;
+    }).should.equal(6);
+  })
+})
