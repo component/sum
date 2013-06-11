@@ -2,10 +2,14 @@
   "name": "sum",
   "repo": "component/sum",
   "description": "Array sum utility",
-  "version": "0.1.1",
-  "keywords": ["array", "sum", "utility"],
+  "version": "0.2.0",
+  "keywords": [
+    "array",
+    "sum",
+    "utility"
+  ],
   "dependencies": {
-    "component/to-function": "*"
+    "component/to-function": "1.2.0"
   },
   "development": {},
   "scripts": [
