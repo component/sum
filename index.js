@@ -16,11 +16,13 @@ var toFunction = require('to-function');
 
 module.exports = function(arr, fn){
   var sum = 0;
+  var len = arr.length
   if (fn) {
-    fn = toFunction(fn);
-    if (Array.isArray(arr)) {
-      for (var i = 0; i < arr.length; ++i) {
-        sum += fn(arr[i], i);
+    if (typeof fn != 'function') fn = toFunction(fn);
+    // array
+    if (len === +len) {
+      for (var key = 0; key < len; ++key) {
+        sum += fn(arr[key], key);
       }
     } else {
       for (var key in arr) {
@@ -28,8 +30,8 @@ module.exports = function(arr, fn){
       }
     }
   } else {
-    for (var i = 0; i < arr.length; ++i) {
-      sum += arr[i];
+    for (var key = 0; key < arr.length; ++key) {
+      sum += arr[key];
     }
   }
   return sum;

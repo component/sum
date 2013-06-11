@@ -26,6 +26,13 @@ describe('sum(arr)', function(){
       return user.age;
     }).should.equal(11);
   })
+
+  it('should sum array like objects', function(){
+    sum({0:1,1:2,2:3,length:3}).should.equal(6);
+    sum({0:1,1:2,2:3,length:3}, function(item){
+      return item
+    }).should.equal(6);
+  })
 })
 
 describe('sum(obj, fn)', function(){
