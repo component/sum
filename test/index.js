@@ -35,8 +35,16 @@ describe('sum(arr)', function(){
   })
 })
 
-describe('sum(obj, fn)', function(){
+describe('sum(obj)', function(){
   it('should sum values', function(){
+    sum({
+      foo: 1,
+      bar: 2,
+      baz: 3
+    }).should.equal(6);
+  })
+
+  it('should support callbacks', function(){
     sum({
       foo: 1,
       bar: 2,

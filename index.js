@@ -30,8 +30,15 @@ module.exports = function(arr, fn){
       }
     }
   } else {
-    for (var key = 0; key < arr.length; ++key) {
-      sum += arr[key];
+    // array
+    if (len === +len) {
+      for (var key = 0; key < len; ++key) {
+        sum += arr[key]
+      }
+    } else {
+      for (var key in arr) {
+        sum += arr[key]
+      }
     }
   }
   return sum;
